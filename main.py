@@ -24,6 +24,7 @@ bulleting = False
 proj_mimage = pygame.image.load("projectile.png")
 proj_image = pygame.image.load("projectile.png")
 enemyspr = pygame.image.load("Enemy.png")
+sfont = pygame.font.SysFont("Roboto", 20)
 font = pygame.font.SysFont("Roboto", 30)
 font_large = pygame.font.SysFont("Roboto", 50)
     
@@ -38,7 +39,7 @@ black = (0, 0, 0)
 white = (255, 255, 255)
 
 
-screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
+screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
 fps = pygame.time.Clock()
 screen.fill(black)
         
@@ -123,6 +124,12 @@ while True:
             screen.blit(title, (125, 100))
             start_b = font.render("press (e) to start", True, white)
             screen.blit(start_b, (150, 200))
+            start_c = sfont.render("Tank Game © 2024 by Aidan Curtiss-North is", True, white)
+            screen.blit(start_c, (5, 350))
+            start_d = sfont.render("licensed under Creative Commons Attribution-NonCommercial", True, white)
+            screen.blit(start_d, (5, 365))
+            start_e = sfont.render("4.0 International", True, white)
+            screen.blit(start_e, (5, 380))
         else:
             title = font_large.render("START", True, white)
             screen.blit(title, (125, 100))
